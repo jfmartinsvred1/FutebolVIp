@@ -1,8 +1,11 @@
-const primeiroNome = document.getElementById("primeiroNome");
-const sobrenome = document.getElementById('sobrenome');
-const email = document.getElementById('email');
-const numero = document.getElementById('numero');
-const btnForm =  document.getElementById('form');
+const primeiroNome = $("#primeiroNome");
+const sobrenome = $('#sobrenome');
+const email = $('#email');
+const numero = $('#numero');
+const btnAssine = $('.btnAssine');
+
+const divInscricao = $('#inscricao');
+
 class Pessoa{
     constructor(primeiroNome,sobrenome,email,numero){
         this.primeiroNome=primeiroNome;
@@ -12,12 +15,38 @@ class Pessoa{
     }
 }
 
-$('#form').on('click',(e)=>{
+function ZerarValorInputs(){
+    primeiroNome.val("");
+    sobrenome.val("");
+    email.val("");
+    numero.val("");
+}
+
+btnAssine.on('click', (e) =>{
+    var target = $("#formulario").offset();
+    var target_top = target.top;
+    $('html, body').animate({ scrollTop: target_top }, 200);
+})
+
+btnAssine.on('mouseover',(e)=>{
+    btnAssine.removeClass("bg-light")
+    btnAssine.addClass("bg-secondary")
+})
+
+btnAssine.on('mouseout', (e)=>{
+    btnAssine.removeClass("bg-secondary")
+    btnAssine.addClass("bg-light")
+})
+
+
+const btnForm =  $('#form');
+btnForm.on('click',(e)=>{
     e.preventDefault()
-    let pessoa = new Pessoa(primeiroNome.value,sobrenome.value,email.value,numero.value)
-    console.log(pessoa)
-    $('#inscricao').find('h2').text("Obrigado por assinar "+pessoa.primeiroNome+"!")
-    $('#inscricao').css({"display":"flex"}).fadeOut(8000)
+    let pessoa = new Pessoa(primeiroNome.val(),sobrenome.val(),email.val(),numero.val())
 
-
+    if(pessoa.primeiroNome.length >=3 && pessoa.sobrenome.length>=3 && pessoa.email.length>=5){
+        divInscricao.find('h2').text("Obrigado por assinar "+pessoa.primeiroNome+"!");
+        divInscricao.css({"display":"flex"}).fadeOut(8000);
+        ZerarValorInputs()
+    }
 })
