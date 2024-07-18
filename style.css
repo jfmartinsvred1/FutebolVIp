@@ -6,3 +6,28 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+@media screen and (max-width:1050px) {
+    #contentSession1{
+        flex-direction: column;
+        align-items: center;
+    }
+    #contentSession2{
+        flex-direction: column;
+    }
+    #contentSession3{
+        flex-direction: column;
+    }
+    #textSession2{
+        display: none;
+    }
+    #textSession1{
+        display: none;
+    }
+}
+@media screen and (min-width:1050px) {
+    .textoPrincipal{
+        width: 25%;
+    }
+}

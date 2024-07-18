@@ -10,24 +10,24 @@
 </head>
 <body>
         <section class="bg-light bg-gradient">
-            <div class="d-flex flex-column align-items-center p-2">
+            <div class="d-flex flex-column align-items-center">
                 <img src="/Images/bola-de-futebol.png" class="image p-3" width="120px" height="120px">
                 <h1>Futebol <span class="text-danger">VIP</span></h1>
             </div>
-            <div class="bg-light d-flex justify-content-around">
-                <div class="w-25">
+            <div class="bg-light d-flex justify-content-around" id="contentSession1">
+                <div class="textoPrincipal">
                     <h3>TENHA ACESSO AO MELHOR CONTEUDO DE FUTEBOL DO BRASIL!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit dolorum provident est corporis similique, numquam perferendis sunt, iste deserunt eius animi modi vel excepturi totam repudiandae accusamus! Ab, qui. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam adipisci numquam sunt dolore, dolorum laborum rerum temporibus neque culpa amet fugiat deleniti, reprehenderit voluptatem dicta eum alias pariatur tenetur assumenda.</p>
+                    <p id="textSession1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit dolorum provident est corporis similique, numquam perferendis sunt, iste deserunt eius animi modi vel excepturi totam repudiandae accusamus! Ab, qui. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam adipisci numquam sunt dolore, dolorum laborum rerum temporibus neque culpa amet fugiat deleniti, reprehenderit voluptatem dicta eum alias pariatur tenetur assumenda.</p>
                 </div>
-                <div class="d-flex flex-column align-items-center justify-content-between w-25 gap-2">
+                <div class="d-flex flex-column align-items-center justify-content-between gap-2 textoPrincipal" id="videoEBtn">
                      <p>De R$ <s>9,99</s> por <span class="text-danger">R$ 0,00</span></p>
                     <img src="/Images/240z_23.jpg" class="img-fluid">
                     <button class="btnAssine btn fs-3 text-dark w-75 shadow p-2 mb-3 bg-light rounded">ASSINE <span class="text-danger">GRATÍS!</span></button>
                     <p>Torne-se um membro!</p>
                 </div>
             </div>
-            <div class="bg-secondary bg-gradient text-light p-3">
-                <div class="d-flex justify-content-around p-3">
+            <div class="bg-secondary bg-gradient text-light">
+                <div class="d-flex justify-content-around p-3" id="contentSession3">
                     <div class=" d-flex align-items-center p-2 gap-2">
                         <img src="/Images/jornal.png" width="80px" class="">
                         <h3>Notícias</h3>
@@ -50,9 +50,9 @@
         <section class="d-flex flex-column bg-dark bg-gradient align-items-center pb-4">
             <div class="d-flex justify-content-around p-5 w-75 text-light gap-5">
                 <h2 class="align-items-baseline fs-1">Quais benefícios o Futebol VIP tem para me oferecer?</h2>
-                <p class="align-content-end">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda natus, explicabo neque nemo eos saepe labore, dolores consectetur aspernatur tempore doloribus reprehenderit ratione ipsam incidunt ea dicta quisquam modi distinctio!</p>
+                <p id="textSession2" class="align-content-end">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda natus, explicabo neque nemo eos saepe labore, dolores consectetur aspernatur tempore doloribus reprehenderit ratione ipsam incidunt ea dicta quisquam modi distinctio!</p>
             </div>
-            <div class="d-flex justify-content-between gap-5 text-light w-75">
+            <div class="d-flex justify-content-between gap-5 text-light w-75" id="contentSession2">
                 <div class="shadow-lg p-4 mb-3 bg-secondary rounded d-flex flex-column gap-3">
                    <img src="/Images/campeonato-de-futebol.png" width="80px">
                     <h3>Cobertura das melhores ligas do mundo</h3>
@@ -77,7 +77,7 @@
                     <img src="/Images/bola-de-futebol.png" class="image" width="70px">
                     <h1>Futebol <span class="text-danger">VIP</span></h1>
                     <h3 class="break-word fs-5 text-light">Envie seus dados para se juntar ao Futebol VIP!</h3>
-                    <form class="gap-2">
+                    <form>
                         <fieldset class="d-flex flex-column gap-3">
                             <input type="text" class="form-control" id="primeiroNome" placeholder="Primeiro Nome:">
                             <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome:">
