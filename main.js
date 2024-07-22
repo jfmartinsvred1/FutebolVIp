@@ -3,7 +3,7 @@ const sobrenome = $('#sobrenome');
 const email = $('#email');
 const numero = $('#numero');
 const btnAssine = $('.btnAssine');
-
+const btnForm =  $('#form');
 const divInscricao = $('#inscricao');
 
 class Pessoa{
@@ -38,8 +38,6 @@ btnAssine.on('mouseout', (e)=>{
     btnAssine.addClass("bg-light")
 })
 
-
-const btnForm =  $('#form');
 btnForm.on('click',(e)=>{
     e.preventDefault()
     let pessoa = new Pessoa(primeiroNome.val(),sobrenome.val(),email.val(),numero.val())

@@ -25,6 +25,10 @@
     #textSession1{
         display: none;
     }
+    footer{
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 @media screen and (min-width:1050px) {
     .textoPrincipal{
