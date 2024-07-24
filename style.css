@@ -18,6 +18,7 @@
     }
     #contentSession3{
         flex-direction: column;
+        align-items:Center;
     }
     #textSession2{
         display: none;
